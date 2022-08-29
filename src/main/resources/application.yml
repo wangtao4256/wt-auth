@@ -1,0 +1,8 @@
+server:
+  port: 9090
+spring:
+  security:
+    user:
+      name: wangtao
+      password: 123456
+      roles: admin
