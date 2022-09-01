@@ -13,8 +13,11 @@ public class DruidDataSourceProperties {
     private String url;
     private String username;
     private String password;
+    //连接池初始化大小
     private int initialSize;
+    //最小空闲数
     private int minIdle;
+    //最大活跃线程数
     private int maxActive = 100;
     private long maxWait;
     private long timeBetweenEvictionRunsMillis;
