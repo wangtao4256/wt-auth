@@ -1,11 +1,18 @@
-package com.wt.authAdmin.dao;
+package com.wt.authadmin.dao;
+
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.wt.authAdmin.entity.SysUserDO;
+import com.wt.authadmin.entity.SysUserDO;
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-public interface SysUserDOMapper extends BaseMapper<SysUserDO> {
+@Mapper
+public interface SysUserDoMapper extends BaseMapper<SysUserDO> {
     @Select("select * from sys_user where name=#{userName}")
     SysUserDO queryUserByName(@Param("userName") String uname);
+
+    @Delete("delete from sys_user")
+    SysUserDO deleteAll();
 }

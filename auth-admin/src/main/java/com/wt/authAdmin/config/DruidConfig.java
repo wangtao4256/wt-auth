@@ -1,4 +1,4 @@
-package com.wt.authAdmin.config;
+package com.wt.authadmin.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
@@ -20,7 +20,7 @@ import java.sql.SQLException;
  * @author tao.wang
  */
 @Configuration
-@EnableConfigurationProperties({DruidDataSourceProperties.class})
+@EnableConfigurationProperties({com.wt.authadmin.config.DruidDataSourceProperties.class})
 public class DruidConfig {
     @Autowired
     private DruidDataSourceProperties properties;
